@@ -1,0 +1,1 @@
+# todo implement solution from here (version 3): https://www.kaggle.com/code/kevalm/xgboost-implementation-on-bank-marketing-dataset?scriptVersionId=2074012

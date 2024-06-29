@@ -1,0 +1,1 @@
+# todo implement solution from here (version 4): https://www.kaggle.com/code/hendraherviawan/predicting-german-credit-default

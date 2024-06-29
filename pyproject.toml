@@ -1,0 +1,15 @@
+[tool.poetry]
+package-mode = false
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter = "^1.0.0"
+scikit-learn = "^1.5.0"
+pandas = "^2.2.2"
+ucimlrepo = "^0.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
