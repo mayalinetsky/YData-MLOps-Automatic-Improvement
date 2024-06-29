@@ -2,31 +2,32 @@
 
 ## Business background
 
-* Who is the client, what business domain the client is in.
-* What business problems are we trying to address?
+* (Who is the client, what business domain the client is in.) The "clients" are two baseline XGBoost models that were 
+trained on the Bank Marketing Dataset and the German Credit Risk Dataset.  
+* (What business problems are we trying to address?) This project aims to dynamically improve the models' overall 
+performance. 
 
 ## Scope
 * What data science solutions are we trying to build?
 * What will we do?
 * How is it going to be consumed by the customer?
+The project's scope will be to design and implement a basic ML pipeline for each model, that would contain an automatic 
+step that would improve the overall performance of the model in any method that does not involve changing the model's
+type or hyperparameters and is not dataset-specific.
 
 ## Personnel
-* Who are on this project:
-	* Microsoft:
-		* Project lead
-		* PM
-		* Data scientist(s)
-		* Account manager
-	* Client:
-		* Data administrator
-		* Business contact
+* Team:
+    * Product Manager: (name). Will be responsible about directing the project to meet the need of the hypothetical clients.
+    * Data Scientist: (name). EDA, model understanding.
+    * Data Engineer (name). Data Expert. Loading and processing.
+    * Architect (name). Repository structure, Code reviews, code design.
+* Client:
+    * Trained XGBoost models?
 	
 ## Metrics
-* What are the qualitative objectives? (e.g. reduce user churn)
-* What is a quantifiable metric  (e.g. reduce the fraction of users with 4-week inactivity)
-* Quantify what improvement in the values of the metrics are useful for the customer scenario (e.g. reduce the  fraction of users with 4-week inactivity by 20%) 
-* What is the baseline (current) value of the metric? (e.g. current fraction of users with 4-week inactivity = 60%)
-* How will we measure the metric? (e.g. A/B test on a specified subset for a specified period; or comparison of performance after implementation to baseline)
+Both baseline models were evaluated using Accuracy.
+The performance of our automatic improvement step will be measured by the % change of the model's accuracy, from before 
+applying the step and after: (acc_after-acc_before)/acc_before*100. 
 
 ## Plan
 * Phases (milestones), timeline, short description of what we'll do in each phase.
