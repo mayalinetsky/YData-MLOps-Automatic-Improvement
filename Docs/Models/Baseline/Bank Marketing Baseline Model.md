@@ -1,31 +1,25 @@
-# Baseline Model Report
+# Baseline Model Report for Bank Marketing Dataset
 
-> The baseline model for this dataset was implemented [here](https://www.kaggle.com/code/kevalm/xgboost-implementation-on-bank-marketing-dataset?scriptVersionId=2074012) 
+> The baseline model for this dataset was originally implemented [here](https://www.kaggle.com/code/kevalm/xgboost-implementation-on-bank-marketing-dataset?scriptVersionId=2074012) 
 
 ## Analytic Approach
-* What is target definition
-* What are inputs (description)
-* What kind of model was built?
+The Bank Marketing Dataset is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. 
+The classification goal is to predict if the client will subscribe a term deposit (variable y - boolean).
+The chosen baseline model is XGBoost.
 
 ## Model Description
 
-* Models and Parameters
-
-	* Description or images of data flow graph
-  		* if AzureML, link to:
-    		* Training experiment
-    		* Scoring workflow
-	* What learner(s) were used?
-	* Learner hyper-parameters
+* DMatrix from xgboost package
+	* See training in [xgboost_bank_marketing_impl.py](../../../Code/notebooks/xgboost-implementation-on-bank-marketing-dataset.ipynb)
 
 
 ## Results (Model Performance)
-* ROC/Lift charts, AUC, R^2, MAPE as appropriate
-* Performance graphs for parameters sweeps if applicable
+The model was evaluated using the accuracy metric, on 30% of the data.
+* Accuracy of 90.76%
 
 ## Model Understanding
 
-* Variable Importance (significance)
+* Variable Importance (significance): see "baseline_bank_marketing_tree.png"
 
 * Insight Derived from the Model
 
