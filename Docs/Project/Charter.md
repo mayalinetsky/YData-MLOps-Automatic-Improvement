@@ -17,10 +17,11 @@ type or hyperparameters and is not dataset-specific.
 
 ## Personnel
 * Team:
-    * Product Manager: (name). Will be responsible about directing the project to meet the need of the hypothetical clients.
-    * Data Scientist: (name). EDA, model understanding.
-    * Data Engineer (name). Data Expert. Loading and processing.
-    * Architect (name). Repository structure, Code reviews, code design.
+    * Project Lead: Eran.
+    * Product Manager: Adir. Responsible about directing the project to meet the need of the hypothetical clients.
+    * Data Scientist: Avital. EDA, model understanding.
+    * Data Engineer Ben. Data Expert. Loading and processing.
+    * Architect Maya. Repository structure, Code reviews, code design.
 * Client:
     * Trained XGBoost models?
 	
