@@ -1,0 +1,7 @@
+# python 3.7.9
+macest==1.0.0 # cannot be managed by poetry because of a dependency error
+jupyter==1.0.0
+ucimlrepo==0.0.7
+xgboost==1.6.2
+graphviz==0.20.1
+scikit-learn==0.22.1 # macest depends on this

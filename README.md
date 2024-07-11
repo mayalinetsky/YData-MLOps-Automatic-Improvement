@@ -5,8 +5,11 @@ MLOps project of a pipeline which contains an automatic step which improves a mo
 # Usage
 
 ## Dependencies
-This project's dependencies are managed using [poetry](https://python-poetry.org/).
-To install dependencies, see [installing dependencies](https://python-poetry.org/docs/basic-usage/#installing-dependencies).
+This project's dependencies are managed using pip.
+To install dependencies, run the following line in a python 3.7.9 environment:
+```shell
+pip install -r .\requirements.txt
+```
 
 ## API
 Say you have an XGBoost model you've already trained, and you want to increase its AUC\ROC metric automatically. 
