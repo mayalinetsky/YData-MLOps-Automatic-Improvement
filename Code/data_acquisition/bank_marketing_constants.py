@@ -36,3 +36,9 @@ POUTCOME = "poutcome"
 
 DEPOSIT = "y"
 """the target column in the dataset."""
+
+DEPOSIT_YES = "yes"
+"""Value of the target column"""
+
+DEPOSIT_NO = "no"
+"""Value of the target column"""
