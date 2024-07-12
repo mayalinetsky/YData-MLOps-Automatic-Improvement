@@ -64,14 +64,15 @@ def train_model(X: pd.DataFrame, y: pd.DataFrame):
 
 def _make_predict_wrapper(booster_model: xgboost.Booster):
     print("In _make_predict_wrapper")
+    prev_predict_func = booster_model.predict
 
     def predict_wrapper(X, *args, **kwargs):
         try:
             print("Predicting normally")
-            return booster_model.predict(X, *args, **kwargs)
+            return prev_predict_func(X, *args, **kwargs)
         except Exception as e:
             print("Caught exception {}".format(e))
-            return booster_model.predict(xgboost.DMatrix(X), *args, **kwargs)
+            return prev_predict_func(xgboost.DMatrix(X), *args, **kwargs)
 
     print("Before _make_predict_wrapper return")
     return predict_wrapper
