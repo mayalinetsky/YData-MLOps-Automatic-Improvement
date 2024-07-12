@@ -54,14 +54,33 @@ def train_model(X: pd.DataFrame, y: pd.DataFrame):
         'num_class': 2
     }
     num_rounds = 20
+    print("Begin training")
     XGB_Model = xgboost.train(params, dtrain, num_rounds)
+    print("Finished training")
+    # XGB_Model.predict = _make_predict_wrapper(XGB_Model)
+    # print("Finished wrapping predict function")
     return XGB_Model
 
 
-def evaluate_predictions_roc_auc_score(y_true: np.ndarray | pd.DataFrame, predicted_probas: np.ndarray):
+def _make_predict_wrapper(booster_model: xgboost.Booster):
+    print("In _make_predict_wrapper")
+
+    def predict_wrapper(X, *args, **kwargs):
+        try:
+            print("Predicting normally")
+            return booster_model.predict(X, *args, **kwargs)
+        except Exception as e:
+            print("Caught exception {}".format(e))
+            return booster_model.predict(xgboost.DMatrix(X), *args, **kwargs)
+
+    print("Before _make_predict_wrapper return")
+    return predict_wrapper
+
+
+def evaluate_predictions_roc_auc_score(y_true, predicted_probas: np.ndarray):
     """
 
-    :param y_true: shape (n_samples,)
+    :param y_true: shape (n_samples,). Array or DataFrame.
     :param predicted_probas: shape (n_samples, 2) where predicted_probas[:, 1] are predicted probabilities for the positive class DEPOSIT_YES_INT
     :return:
     """
