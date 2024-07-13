@@ -1,1 +1,3 @@
-# todo: import to here the functions of the API
+from uq360.algorithms.blackbox_metamodel.metamodel_classification import MetamodelClassification
+
+__all__ = ['MetamodelClassification']
