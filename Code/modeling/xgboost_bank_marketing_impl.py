@@ -56,6 +56,10 @@ def preprocess_labels(deposit: pd.Series):
     return deposit.replace(to_replace={DEPOSIT_YES: 1, DEPOSIT_NO: 0})
 
 
+def get_model_for_training():
+    return xgboost.XGBClassifier()
+
+
 def train_model(X: pd.DataFrame, y: pd.DataFrame):
     """
     Train XGBoost model on the given data as done so in the Kaggle notebook
@@ -77,7 +81,7 @@ def train_model(X: pd.DataFrame, y: pd.DataFrame):
     return XGB_Model
 
 
-def evaluate_predictions_roc_auc_score(y_true: np.ndarray | pd.DataFrame, predicted_probas: np.ndarray):
+def evaluate_predictions_roc_auc_score(y_true, predicted_probas: np.ndarray):
     """
 
     :param y_true: shape (n_samples,)
