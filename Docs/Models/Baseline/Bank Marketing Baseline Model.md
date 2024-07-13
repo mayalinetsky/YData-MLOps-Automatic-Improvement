@@ -9,14 +9,14 @@ The chosen baseline model is XGBoost.
 
 ## Model Description
 
-* DMatrix from xgboost package
-	* See training in [xgboost_bank_marketing_impl.py](../../../Code/notebooks/baseline-impl-bank-marketing-dataset.ipynb)
+* XGBClassifier from xgboost package
+	* See training in [this notebook](../../../Code/notebooks/baseline-impl-bank-marketing-dataset.ipynb)
 
 
 ## Results (Model Performance)
 The model was evaluated using the accuracy metric, on 30% of the data.
 * Accuracy of 90.76%
-* Log Loss: 
+* Log Loss: 3.2822795777861375
 
 ## Model Understanding
 
