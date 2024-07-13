@@ -8,20 +8,24 @@ trained on the Bank Marketing Dataset and the German Credit Risk Dataset.
 performance. 
 
 ## Scope
-* What data science solutions are we trying to build?
-* What will we do?
-* How is it going to be consumed by the customer?
-The project's scope will be to design and implement a basic ML pipeline for each model, that would contain an automatic 
-step that would improve the overall performance of the model in any method that does not involve changing the model's
-type or hyperparameters and is not dataset-specific.
+* What data science solutions are we trying to build?<br>
+We were trying to implement a post-hoc framework by IBM, called Uncertainty Quantification 360.
+The UQ360 takes the predictions of the costumers model (i.e. base model), and trains a metamodel to predict on what samples the base model is going to predict wrong.<br><br>
+* What will we do? <br>
+The frameworp adds the metamodel as a wrapper to the base model, which is pre-trained and whose parameters are inaccessible.<br><br>
+* How is it going to be consumed by the customer?<br>
+We provide the costumer with an API that uses the UQ360 and implements an additional step that may be used instead of their existing model.<bR>
+An example notebook is provided at: [baseline-impl-bank-marketing-dataset](https://github.com/mayalinetsky/YData-MLOps-Automatic-Improvement/blob/1389f8bebf4eccd8e390ecbd7c7b6e4ae9161a29/Code/notebooks/baseline-impl-bank-marketing-dataset.ipynb)
+
+
 
 ## Personnel
 * Team:
     * Project Lead: Eran.
     * Product Manager: Adir. Responsible about directing the project to meet the need of the hypothetical clients.
     * Data Scientist: Avital. EDA, model understanding.
-    * Data Engineer Ben. Data Expert. Loading and processing.
-    * Architect Maya. Repository structure, Code reviews, code design.
+    * Data Engineer: Ben. Data Expert. Loading and processing.
+    * Architect: Maya. Repository structure, Code reviews, code design.
 * Client:
     * Trained XGBoost models?
 	
