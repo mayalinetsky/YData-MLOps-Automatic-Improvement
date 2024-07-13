@@ -13,4 +13,4 @@ See more information [here](https://archive.ics.uci.edu/ml/datasets/bank+marketi
 This dataset classifies people described by a set of attributes as good or bad credit risks. 
 Comes in two formats (one all numeric). Also comes with a cost matrix.
 
-See more information [here](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
+See more information [here](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data).

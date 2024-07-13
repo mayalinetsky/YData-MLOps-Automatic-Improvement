@@ -20,3 +20,4 @@ See [example usage notebook](Code/notebooks/auto_improve_example_usage.ipynb).
 
 # Credits
 Project template was taken from [Azure-TDSP-ProjectTemplate](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Model/Baseline/Baseline%20Models.md).
+The pipeline step is based on [IBM's UQ360 package](https://github.com/IBM/UQ360)
