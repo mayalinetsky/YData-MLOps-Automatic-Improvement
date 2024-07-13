@@ -42,7 +42,7 @@ def get_feature_preprocessor_step():
     :return: pipeline step which preprocesses the features of the bank marketing dataset
     """
     categorical_transformer = Pipeline(steps=[
-        ('onehot', OneHotEncoder(handle_unknown='ignore'))
+        ('onehot', OneHotEncoder(handle_unknown='ignore', sparse=False))
     ])
 
     preprocessor = ColumnTransformer(
