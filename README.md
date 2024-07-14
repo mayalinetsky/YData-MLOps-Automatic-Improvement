@@ -9,10 +9,10 @@ This project's dependencies are managed using [poetry](https://python-poetry.org
 To install dependencies, see [installing dependencies](https://python-poetry.org/docs/basic-usage/#installing-dependencies).
 
 ## API
-Say you have an XGBoost model you've already trained, and you want to increase its AUC\ROC metric automatically. 
+Say you have an XGBoost model you've already trained, and you want to increase its log loss metric automatically. 
 You've come to the right place.
 
-todo: explain API.
+The only class you need is MetamodelClassification.
 
 See [example usage notebook](Code/notebooks/auto_improve_example_usage.ipynb).
 
@@ -20,3 +20,4 @@ See [example usage notebook](Code/notebooks/auto_improve_example_usage.ipynb).
 
 # Credits
 Project template was taken from [Azure-TDSP-ProjectTemplate](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Model/Baseline/Baseline%20Models.md).
+The pipeline step is based on [IBM's UQ360 package](https://github.com/IBM/UQ360)
