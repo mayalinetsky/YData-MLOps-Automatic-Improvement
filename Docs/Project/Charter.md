@@ -17,8 +17,6 @@ The frameworp adds the metamodel as a wrapper to the base model, which is pre-tr
 We provide the costumer with an API that uses the UQ360 and implements an additional step that may be used instead of their existing model.<bR>
 An example notebook is provided at: [baseline-impl-bank-marketing-dataset](https://github.com/mayalinetsky/YData-MLOps-Automatic-Improvement/blob/1389f8bebf4eccd8e390ecbd7c7b6e4ae9161a29/Code/notebooks/baseline-impl-bank-marketing-dataset.ipynb)
 
-
-
 ## Personnel
 * Team:
     * Project Lead: Eran.
@@ -27,7 +25,7 @@ An example notebook is provided at: [baseline-impl-bank-marketing-dataset](https
     * Data Engineer: Ben. Data Expert. Loading and processing.
     * Architect: Maya. Repository structure, Code reviews, code design.
 * Client:
-    * Trained XGBoost models?
+    * Data scientists, software developers and companies that have a working model that sub-performs, but can't or wish to avoid re-training and changing the model.
 	
 ## Metrics
 Both baseline models were evaluated using Accuracy.
@@ -35,22 +33,10 @@ The performance of our automatic improvement step will be measured by the % chan
 applying the step and after: (acc_after-acc_before)/acc_before*100. 
 
 ## Architecture
-* Data
-  * What data do we expect? Raw data in the customer data sources (e.g. on-prem files, SQL, on-prem Hadoop etc.)
-* Data movement from on-prem to Azure using ADF or other data movement tools (Azcopy, EventHub etc.) to move either
-  * all the data, 
-  * after some pre-aggregation on-prem,
-  * Sampled data enough for modeling 
+* Data... TBD
+* Model... TBD
+* Metamodel... TBD
 
-* What tools and data storage/analytics resources will be used in the solution e.g.,
-  * ASA for stream aggregation
-  * HDI/Hive/R/Python for feature construction, aggregation and sampling
-  * AzureML for modeling and web service operationalization
-* How will the score or operationalized web service(s) (RRS and/or BES) be consumed in the business workflow of the customer? If applicable, write down pseudo code for the APIs of the web service calls.
-  * How will the customer use the model results to make decisions
-  * Data movement pipeline in production
-  * Make a 1 slide diagram showing the end to end data flow and decision architecture
-    * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
 
 ## Communication
 * A Slack channel with all team members
