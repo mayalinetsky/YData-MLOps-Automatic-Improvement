@@ -34,9 +34,6 @@ Both baseline models were evaluated using Accuracy.
 The performance of our automatic improvement step will be measured by the % change of the model's accuracy, from before 
 applying the step and after: (acc_after-acc_before)/acc_before*100. 
 
-## Plan
-* Phases (milestones), timeline, short description of what we'll do in each phase.
-
 ## Architecture
 * Data
   * What data do we expect? Raw data in the customer data sources (e.g. on-prem files, SQL, on-prem Hadoop etc.)
@@ -56,5 +53,5 @@ applying the step and after: (acc_after-acc_before)/acc_before*100.
     * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
 
 ## Communication
-* How will we keep in touch? Weekly meetings?
-* Who are the contact persons on both sides?
+* A Slack channel with all team members
+* Task-oriented work meetings
