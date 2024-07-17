@@ -8,49 +8,36 @@ trained on the Bank Marketing Dataset and the German Credit Risk Dataset.
 performance. 
 
 ## Scope
-* What data science solutions are we trying to build?
-* What will we do?
-* How is it going to be consumed by the customer?
-The project's scope will be to design and implement a basic ML pipeline for each model, that would contain an automatic 
-step that would improve the overall performance of the model in any method that does not involve changing the model's
-type or hyperparameters and is not dataset-specific.
+* What data science solutions are we trying to build?<br>
+We were trying to implement a post-hoc framework by IBM, called Uncertainty Quantification 360.<br>
+The UQ360 takes the predictions of the customers' model (i.e. base model), and trains a metamodel to predict on which samples the base model is going to predict wrong on.<br><br>
+* What will we do? <br>
+The framework adds the metamodel as a wrapper to the base model, which is pre-trained and whose parameters are inaccessible.<br><br>
+* How is it going to be consumed by the customer?<br>
+We provide the costumer with an API that uses the UQ360 and implements an additional step that may be used instead of their existing model.<bR>
+An example notebook is provided at: [example usage notebook](../../Code/notebooks/auto_improve_example_usage.ipynb)
 
 ## Personnel
 * Team:
     * Project Lead: Eran.
     * Product Manager: Adir. Responsible about directing the project to meet the need of the hypothetical clients.
     * Data Scientist: Avital. EDA, model understanding.
-    * Data Engineer Ben. Data Expert. Loading and processing.
-    * Architect Maya. Repository structure, Code reviews, code design.
+    * Data Engineer: Ben. Data Expert. Loading and processing.
+    * Architect: Maya. Repository structure, Code reviews, code design.
 * Client:
-    * Trained XGBoost models?
+    * Data scientists, software developers and companies that have a working model that sub-performs, but can't or wish to avoid re-training and changing the model.
 	
 ## Metrics
-Both baseline models were evaluated using Accuracy.
-The performance of our automatic improvement step will be measured by the % change of the model's accuracy, from before 
-applying the step and after: (acc_after-acc_before)/acc_before*100. 
-
-## Plan
-* Phases (milestones), timeline, short description of what we'll do in each phase.
+Both baseline models were evaluated using [log loss](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html).
+The performance of our automatic improvement step can be measured by the % change of the model's log loss, from before 
+applying the step and after: (loss_after-loss_before)/loss_before*100. 
 
 ## Architecture
-* Data
-  * What data do we expect? Raw data in the customer data sources (e.g. on-prem files, SQL, on-prem Hadoop etc.)
-* Data movement from on-prem to Azure using ADF or other data movement tools (Azcopy, EventHub etc.) to move either
-  * all the data, 
-  * after some pre-aggregation on-prem,
-  * Sampled data enough for modeling 
+* Data... TBD
+* Model... TBD
+* Metamodel... TBD
 
-* What tools and data storage/analytics resources will be used in the solution e.g.,
-  * ASA for stream aggregation
-  * HDI/Hive/R/Python for feature construction, aggregation and sampling
-  * AzureML for modeling and web service operationalization
-* How will the score or operationalized web service(s) (RRS and/or BES) be consumed in the business workflow of the customer? If applicable, write down pseudo code for the APIs of the web service calls.
-  * How will the customer use the model results to make decisions
-  * Data movement pipeline in production
-  * Make a 1 slide diagram showing the end to end data flow and decision architecture
-    * If there is a substantial change in the customer's business workflow, make a before/after diagram showing the data flow.
 
 ## Communication
-* How will we keep in touch? Weekly meetings?
-* Who are the contact persons on both sides?
+* A Slack channel with all team members
+* Task-oriented work meetings
