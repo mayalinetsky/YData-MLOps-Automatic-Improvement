@@ -9,13 +9,13 @@ performance.
 
 ## Scope
 * What data science solutions are we trying to build?<br>
-We were trying to implement a post-hoc framework by IBM, called Uncertainty Quantification 360.
-The UQ360 takes the predictions of the costumers model (i.e. base model), and trains a metamodel to predict on what samples the base model is going to predict wrong.<br><br>
+We were trying to implement a post-hoc framework by IBM, called Uncertainty Quantification 360.<br>
+The UQ360 takes the predictions of the customers' model (i.e. base model), and trains a metamodel to predict on which samples the base model is going to predict wrong on.<br><br>
 * What will we do? <br>
-The frameworp adds the metamodel as a wrapper to the base model, which is pre-trained and whose parameters are inaccessible.<br><br>
+The framework adds the metamodel as a wrapper to the base model, which is pre-trained and whose parameters are inaccessible.<br><br>
 * How is it going to be consumed by the customer?<br>
 We provide the costumer with an API that uses the UQ360 and implements an additional step that may be used instead of their existing model.<bR>
-An example notebook is provided at: [baseline-impl-bank-marketing-dataset](https://github.com/mayalinetsky/YData-MLOps-Automatic-Improvement/blob/1389f8bebf4eccd8e390ecbd7c7b6e4ae9161a29/Code/notebooks/baseline-impl-bank-marketing-dataset.ipynb)
+An example notebook is provided at: [example usage notebook](../../Code/notebooks/auto_improve_example_usage.ipynb)
 
 ## Personnel
 * Team:
@@ -28,9 +28,9 @@ An example notebook is provided at: [baseline-impl-bank-marketing-dataset](https
     * Data scientists, software developers and companies that have a working model that sub-performs, but can't or wish to avoid re-training and changing the model.
 	
 ## Metrics
-Both baseline models were evaluated using Accuracy.
-The performance of our automatic improvement step will be measured by the % change of the model's accuracy, from before 
-applying the step and after: (acc_after-acc_before)/acc_before*100. 
+Both baseline models were evaluated using [log loss](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html).
+The performance of our automatic improvement step can be measured by the % change of the model's log loss, from before 
+applying the step and after: (loss_after-loss_before)/loss_before*100. 
 
 ## Architecture
 * Data... TBD
