@@ -33,9 +33,16 @@ The performance of our automatic improvement step can be measured by the % chang
 applying the step and after: (loss_after-loss_before)/loss_before*100. 
 
 ## Architecture
-* Data... TBD
-* Model... TBD
-* Metamodel... TBD
+* Data acquisition - Simple modules for fetching the source datasets, extracting the features and the labels and compose a model-suitable raw dataset.
+  * bank_marketing_constants: mostly column names
+  * bank_marketing_loading: fetching, extracting and composing dataset for bank marketing
+  * german_credit_loading: column names; fetching, extracting and composing dataset for bank marketing
+* Modeling - implementation of XGBoost model for bank marketing and german credit
+  * Loading the model (in bank marketing as a json tree; in german credit direct load)
+  * Define functions for preprocessing, training and evaluation
+* Auto-improve pipeline - set MetaModelClassification as a meta-model class  
+  * Can be used to extract confidence scores from black-box classification
+  * Usage can be done importing the class from the package and use it either as is, or in an sklearn pipeline
 
 
 ## Communication
