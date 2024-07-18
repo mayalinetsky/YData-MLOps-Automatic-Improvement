@@ -2,20 +2,13 @@
 
 ## Business background
 
-* (Who is the client, what business domain the client is in.)
-
   The potential clients are companies in the financial 
-    domain which already employ ML supervised models to classify client behaviour.
-    For example a banks marketing branch using xgboost classifier to predict the response to an ad campaign,
-    or  a credit risk assessor  using  random forest classifier to predict borrowers probability to default on their loan .  
-
-
-* (What business problems are we trying to address?) 
-
-  These businesses deal not only with accuracy of their
-  accuracy of their predictions but also with the confidence of the prediction , therefore by improving the accuracy
-  of the probabilities prediction, the businesses will be able to
-  increase its revenue
+  domain which already employ supervised ML models to classify client behaviour.
+  For example a banks marketing branch using xgboost classifier to predict the response to an ad campaign,
+  or  a credit risk assessor  using  random forest classifier to predict borrowers probability to default on their loan.  
+  
+  These businesses deal with not only the accuracy of their predictions, but also with the confidence of the prediction; 
+  Therefore by providing probabilities to the predictions, the businesses will be able to make appropriate decisions.
 
 ## Scope
 * What data science solutions are we trying to build?<br>
